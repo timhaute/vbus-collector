@@ -290,43 +290,20 @@ int main(int argc, char *argv[])
 
                 if (print_result)
                 {
-                    printf("System time:%02d:%02d"
-                        ", Sensor1 temp:%.1fC"
-                        ", Sensor2 temp:%.1fC"
-                        ", Sensor3 temp:%.1fC"
-                        ", Sensor4 temp:%.1fC"
-                        ", Pump speed1:%d%%"
-                        ", Pump speed2:%d%%"
-                        //", RelayMask:%d"
-                        //", ErrorMask:%d"
-                        //", Scheme:%d, %d, %d, %d, %d, %d, %d"
-                        ", Hours1:%d, Hours2:%d"
-                        //", %dWH, %dkWH, %dMWH"
-                        //", Version:%.2f"
+                    printf(
+                        "F1 capteur toit:%.1fC"
+                        ", F2 retour tank:%.1fC"
+                        ", F3 tank bas:%.1fC"
+                        ", F4 sortie tank:%.1fC"
+                        ", F6 tank haut:%.1fC"
+                        ", Pompe speed:%d%%"
                         "\n",
-                        packet.bsPlusPkt.SystemTime / 60,
-                        packet.bsPlusPkt.SystemTime % 60,
                         packet.bsPlusPkt.TempSensor1 * 0.1,
                         packet.bsPlusPkt.TempSensor2 * 0.1,
                         packet.bsPlusPkt.TempSensor3 * 0.1,
                         packet.bsPlusPkt.TempSensor4 * 0.1,
-                        packet.bsPlusPkt.PumpSpeed1,
-                        packet.bsPlusPkt.PumpSpeed2,
-                        //packet.bsPlusPkt.RelayMask,
-                        //packet.bsPlusPkt.ErrorMask,
-                        //packet.bsPlusPkt.Scheme,
-                        //packet.bsPlusPkt.OptionCollectorMax,
-                        //packet.bsPlusPkt.OptionCollectorMin,
-                        //packet.bsPlusPkt.OptionCollectorFrost,
-                        //packet.bsPlusPkt.OptionTubeCollector,
-                        //packet.bsPlusPkt.OptionRecooling,
-                        //packet.bsPlusPkt.OptionHQM,
-                        packet.bsPlusPkt.OperatingHoursRelay1,
-                        packet.bsPlusPkt.OperatingHoursRelay2
-                        //packet.bsPlusPkt.HeatQuantityWH,
-                        //packet.bsPlusPkt.HeatQuantityKWH,
-                        //packet.bsPlusPkt.HeatQuantityMWH
-                        //packet.bsPlusPkt.Version * 0.01
+                        packet.bsPlusPkt.TempSensor6 * 0.1,
+                        packet.bsPlusPkt.PumpSpeed1
                     );
                 }
 
