@@ -291,12 +291,12 @@ int main(int argc, char *argv[])
                 if (print_result)
                 {
                     printf(
-                        "F1 capteur toit:%.1fC"
-                        ", F2 retour tank:%.1fC"
-                        ", F3 tank bas:%.1fC"
-                        ", F4 sortie tank:%.1fC"
-                        ", F6 tank haut:%.1fC"
-                        ", Pompe speed:%d%%"
+                        "F1 roof:%.1fC"
+                        ", F2 solar pump from roof:%.1fC"
+                        ", F3 tank bottom:%.1fC"
+                        ", F4 solar pump to roof:%.1fC"
+                        ", F6 tank top:%.1fC"
+                        ", Pump speed:%d%%"
                         "\n",
                         packet.bsPlusPkt.TempSensor1 * 0.1,
                         packet.bsPlusPkt.TempSensor2 * 0.1,
